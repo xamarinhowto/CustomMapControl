@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XhtCustomMap.Controls"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="XhtCustomMap.MainPage">
+
+    <Grid RowDefinitions="0.7*,0.3*">
+        <controls:CustomMap x:Name="MyMap">
+            <x:Arguments>
+                <maps:MapSpan>
+                    <x:Arguments>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>-25.734968</x:Double>
+                                <x:Double>134.489563</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                        <x:Double>40</x:Double>
+                        <x:Double>36</x:Double>
+                    </x:Arguments>
+                </maps:MapSpan>
+            </x:Arguments>
+        </controls:CustomMap>
+        <StackLayout Margin="30" Grid.Row="1">
+            <Label x:Name="Latitude"/>
+            <Label x:Name="Longitude"/>
+            <Label x:Name="Radius"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
